@@ -1,0 +1,49 @@
+/* COLORS */
+:root {
+    --softorange: #F4A259;
+    --tomatored: #F25C66;
+    --mediumblu: #1E272D;
+}
+
+.close-container {
+    position: absolute;
+    margin: auto;
+    width: 40px;
+    height: 50px;
+    right: 0px;
+    top: 0px;
+    /* height: 20px; */
+    cursor: pointer;
+}
+
+.leftright {
+    height: 4px;
+    width: 20px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: var(--softorange);
+    border-radius: 2px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in;
+}
+
+.rightleft {
+    height: 4px;
+    width: 20px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: var(--softorange);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    transition: all 0.3s ease-in;
+}
+
+.close-container:hover .leftright {
+    transform: rotate(-45deg);
+    background-color: var(--tomatored);
+}
+
+.close-container:hover .rightleft {
+    transform: rotate(45deg);
+    background-color: var(--tomatored);
+}

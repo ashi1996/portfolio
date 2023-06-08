@@ -1,0 +1,128 @@
+.contactPage{
+    animation: animate-fade-top 0.7s ease-in-out ;
+}
+
+.contactPage .sub-titel-container{
+    min-height: 50px;
+}
+
+.contactPage .sub-titel{
+    margin-top: 0;
+}
+
+
+.contactPage .contact-item{
+    position: relative!important;
+    font-weight: 500;
+    font-size: 16px;
+    padding-left: 50px;
+    line-height: 25px;
+    padding-top: 5px;
+    margin-bottom: 20px; ;
+}
+
+
+ .contactPage .contact-item.link{
+    color: var(--gray-light);
+    cursor: pointer;
+}
+
+.layout[data-dark=true]  .contactPage .contact-item.link{
+    
+    color: #fff;
+    /* text-decoration:none; */
+}
+
+.contactPage .i{
+    left: 0;
+    position: absolute;
+    top: 10px;
+    font-size: 33px;
+    color: var(--warning);
+  
+}
+
+.contactPage .contact-item span{
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.contactPage  ul{
+    padding-left: 0;
+    list-style: none;
+}
+.contactPage  li{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    /* line-height: 42px; */
+    /* text-align: center; */
+    /* color: #fff; */
+    /* transition: .3s; */
+    /* font-size: 17px; */
+    margin: 0 6px;
+    /* background: #2b2a2a; */
+    border-radius: 50%;
+}
+
+.contactPage li{
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    /* line-height: 42px; */
+    /* text-align: center; */
+    /* color: #fff; */
+    transition: .3ms;
+    /* font-size: 17px; */
+    margin: 0 6px;
+    /* background: #2b2a2a; */
+}
+
+.contactPage li :hover{
+    transform: scale(1.09);
+}
+
+.contactPage  li img{
+    border-radius: 50%;
+
+}
+
+.layout[data-dark=true]  .contactPage  li img.invertMe{
+   filter: invert();
+}
+
+.contactPage .share {
+   color: var(--dark);
+   font-size: 1.5em;
+   /* border-radius: 50%; */
+}
+
+.layout[data-dark=true]  .contactPage .share {
+   color: var(--white);
+   /* border-radius: 50%; */
+}
+
+@media only screen and (max-width: 600px) {
+    .contactPage .titelWrapper{
+        padding-bottom: 10px;
+    }
+
+    .contactPage .sub-titel-container{
+        min-height: 100px;
+    }
+
+    .contactPage .contact-item, .contactPage .sub-titel{
+        position: relative!important;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .contactPage .contact-item span{
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+}

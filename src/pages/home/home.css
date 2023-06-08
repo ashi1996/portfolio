@@ -1,0 +1,215 @@
+.homePage {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* background-color: #000000; */
+    display: flex;
+    animation: animate-fade-top 0.7s ease-in-out ;
+}
+
+
+.homePage .profile-section {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('../../assets/media/images/new-profile.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 17px 35px 112px 100px #000000;
+}
+
+.layout[data-dark=false] .homePage .profile-section {
+    /* box-shadow: inset 17px 35px 112px 100px #ffff;; */
+    box-shadow: inset 20px 35px 112px 90px #ffff;;
+    box-shadow: inset 105px 77px 202px 125px #ffff;;
+    box-shadow: inset 105px 44px 202px 125px #ffffff;;
+    box-shadow: inset 98px 0px 171px 123px #ffff;;
+    
+}
+
+.homePage .profile-content {
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    z-index: 1;
+}
+
+.homePage .profile-content .box-wrapper {
+    position: relative;
+}
+
+/* .homePage .profile-content .box-wrapper::after{
+    z-index: -1;
+    content: "";
+    width: 200px;
+    top: -40%;
+    right: 0;
+    transform: translateX(40%);
+    height: 350px;
+    border: 2px solid var(--warning);
+    position: absolute;
+
+} */
+
+.homePage .profile-content .titel {
+    position: relative;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+.homePage .profile-content .titel::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 2px;
+    background-color: var(--warning);
+    top: 50%;
+    transform: translateX(-110%);
+}
+
+.homePage .profile-content h1 {
+    text-transform: uppercase;
+    font-size: 2.3em;
+    width: fit-content;
+    background-color: #000000;
+    
+}
+
+.layout[data-dark=false] .homePage .profile-content h1 {
+    background: none;
+    background: #fff;
+}
+
+.homePage .profile-content h1::after {
+    z-index: -1;
+    content: "";
+    height: 300px;
+    width: 200px;
+    top: -10%;
+    right: 0;
+    transform: translateX(40%);
+    border: 2px solid var(--warning);
+    position: absolute;
+}
+
+.homePage .profile-content h1 span {
+    color: var(--warning);
+}
+
+.homePage .profile-content h1 .text-box {
+    width: 50%;
+}
+
+.homePage .profile-content p {
+    background-color: #000000;
+    font-size: 15px;
+}
+
+.layout[data-dark=false] .homePage .profile-content p {
+    background: none;
+    background-color: #fff;
+}
+
+.homePage .profile-content .more-about-btn {
+    margin-top: 20px;
+}
+
+@media only screen and (max-width: 990px) {
+    .homePage .profile-content {
+        
+    }
+
+    .homePage .profile-content .box-wrapper {}
+
+    .homePage .profile-content .titel {}
+
+    .homePage .profile-content .titel::before {
+        position: absolute;
+        content: "";
+        width: 45px;
+        height: 2px;
+        background-color: var(--warning);
+        top: 50%;
+        transform: translateX(-110%);
+    }
+
+    .homePage .profile-content h1 {
+        /* background: none; */
+        text-transform: uppercase;
+        font-size: 1.8em;
+        /* position: relative; */
+        margin: 0;
+        padding: 0;
+        /* position: relative; */
+    }
+
+    .homePage .profile-content h1::after {
+        width: 200px;
+        height: 300px;
+        top: -20%;
+        transform: translateX(0%);
+    }
+
+
+    .homePage .profile-content h1 span {
+        color: var(--warning);
+    }
+
+    .homePage .profile-content p {
+        /* background: none; */
+        width: 80%;
+    }
+
+    .homePage .profile-content .text-box {
+       min-height: 60px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .homePage .profile-section {
+        display: none;
+    }
+
+    .homePage .mobile-wrapper {}
+
+    .homePage .profile-content {
+        margin-bottom: 80px;
+
+    }
+
+    .homePage .profile-content .box-wrapper {}
+
+    .homePage .profile-content .titel {
+        /* background: #000000;
+        margin: 0; */
+        /* display: inline-block; */
+        /* background: none; */
+
+    }
+
+    .homePage .profile-content h1 {
+        /* background: #000000; */
+        /* font-size: 1.3em;
+        margin: 0; */
+        /* background: none; */
+        font-size: 3em;
+
+    }
+
+    .homePage .profile-content h1::after {
+        display: none;
+    }
+
+    .homePage .profile-content p {
+        /* margin: 0; */
+        font-size: 15px;
+        /* display: inline-block; */
+        /* background: #000000; */
+    }
+   
+}

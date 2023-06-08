@@ -1,0 +1,120 @@
+.homePage{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    animation: animate-fade-top 0.7s ease-in-out ;
+}
+
+.homePage .body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.homePage .leftBox {
+    width: 50%;
+    display: grid;
+    place-items: center start;
+    margin: 0;
+}
+
+.homePage .rightBox{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.rightBox .innerBox{
+    width: 85%;
+}
+
+.homePage h1{
+    color: white;
+    font: 900  cookie, cursive;
+    text-align: center;
+    filter: drop-shadow(.05em .05em orange);
+    mix-blend-mode: difference;
+}
+
+.profile-container {
+    position: relative;
+    padding: 30px;
+}
+
+.profile-container::after {
+    content: '';
+    border-radius: 999px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+ 
+    background: conic-gradient(
+      from var(--from),
+      var(--green),
+      var(--warning) var(--distance),
+      transparent var(--distance)
+    );
+ 
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - var(--border)),
+      #fff calc(100% - var(--border) + 1px)
+    );
+    mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - var(--border)),
+      #fff calc(100% - var(--border) + 1px)
+    );
+}
+
+.profile-container >img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 999px;
+    display: block;
+}
+
+.aboutMeBtn{
+    margin-top: 10px;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .homePage .leftBox{
+        width: 100%;
+        display: grid;
+        place-items: center ;
+    }
+    
+    .homePage .rightBox{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .profile-container >img {
+        width: 200px ;
+        height: 200px ;
+        border-radius: 999px;
+        display: block;
+    }
+
+    .homePage h1{
+        margin-top:0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+ 

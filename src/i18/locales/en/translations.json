@@ -1,0 +1,19 @@
+{
+    "pages" : {
+        "home" : {
+            "titel" : "ASHI  MOR",
+            "subTitel" : "Fullstack Developer",
+            "description": " My name is Ashi and I'm a Full Stack Web Developer. I write code with various technologies (MongoDB, NESTJS, Express, Typescript and React). I take every opportunity to expand my knowledge and become more professional as time progresses.",
+            "morAbouteMeBtn" : "More About Me"
+        },
+        "about" : {
+
+        }, 
+        "protfolio" : {
+
+        },
+        "contact" : {
+
+        }
+    }
+}

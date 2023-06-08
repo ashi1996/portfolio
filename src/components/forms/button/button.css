@@ -1,0 +1,108 @@
+.btnWrraper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.btnWrraper[data-outline=true]{
+    border: 2px solid var(--warning);
+    width: 200px;
+}
+
+
+/* .btnWrraper:hover, .btnWrraper:active{
+    background: var( --warning );
+    opacity: 1;
+} */
+
+
+.btnWrraper .titelWrapper{
+    width: auto;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    z-index: 5;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.8s;
+    background: var( --white-light );
+    color: var(--dark-light);
+}
+
+.button[data-dark=true]{
+    background: var( --dark-light );
+    color:  var(--white-light) ;
+}
+
+.button.active{
+    background-color: var( --warning );
+}
+
+.button::before{
+    transition: all .3s linear;
+    z-index: -1;
+    position: absolute;
+    content: ' ';
+    right:  0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: var( --warning );
+    opacity: 0;
+    
+}
+
+.btnWrraper[data-outline=true]:hover .button::before,.btnWrraper[data-outline=true]:active .button::before, .button:hover::before {
+    background: var( --warning );
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    z-index: -1;
+    position: absolute;
+    content: attr(data-label);
+    right:  0;
+    width: 200px;
+    height: 100%;
+    border-radius: 100px;
+    background-color: var( --warning );
+}
+
+
+@media only screen and (max-width: 990px) {
+    /* .btnWrraper:active{
+        background: var( --warning );
+        opacity: 1;
+    }  */
+
+    .button[data-dark=true]{
+        background:var(--gray);
+        color:  var(--white-light) ;
+    }
+
+    .button.active{
+        background-color: var( --warning );
+    }
+   
+    .btnWrraper[data-outline=false]:hover .button::before,.btnWrraper[data-outline=false]:active , .button:hover::before{
+       display: none;
+    }
+}

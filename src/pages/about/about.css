@@ -1,0 +1,131 @@
+.aboutPage{
+    /* min-height: 100vh; */
+    /* overflow: hidden; */
+    animation: animate-fade-top 0.7s ease-in-out ;
+}
+
+.aboutPage > .aboutBody{
+
+}
+
+.aboutPage .personalInfoWrapper{
+    width: 50%;
+}
+
+.aboutPage .personalInfoWrapper h3{
+    padding-bottom: 22px;
+    margin: 0;
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody {
+   flex: 0 0 auto;
+   width: 100%;   
+    padding-left: 15px;
+   padding-right: 15px;
+
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody > ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    list-style: none;
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody > ul > li{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-bottom: 20px;
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody > ul > li > .titel{
+    opacity: .8;
+    text-transform: capitalize;
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody > ul > li > .value{
+    font-weight: 600;
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody > ul > li > .value a{
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.layout[data-dark=false] .aboutPage .personalInfoWrapper .personalInfoBody > ul > li > .value a{
+    /* text-decoration: none; */
+    color: var(--gray-light);
+}
+
+.aboutPage .personalInfoWrapper .personalInfoBody > ul > li > .value.success{
+    color: var(--success);
+}
+
+.aboutPage hr{
+    border-top: 1px solid black;
+    margin: 80px auto 55px;
+    max-width: 40%;
+    opacity: .05;
+    /* border: 0; */
+}
+
+.aboutPage .imgContainer{
+    border: 2px solid var(--white-light);
+    border-radius: 6px;
+}
+
+.layout[data-dark=false] .aboutPage .imgContainer{
+    border: 2px solid var(--dark);
+    border-radius: 6px;
+}
+
+.layout[data-dark=false] .aboutPage .imgContainer:hover,  .layout[data-dark=true] .aboutPage .imgContainer:hover{
+    border: 2px solid var(--warning);
+}
+
+.aboutPage .imgContainer > .img{
+    background-image: url('../../assets/media/images/about-img.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 20rem;
+    height:25rem;
+    transform: translate(-20px, -20px);
+    border-radius: 6px;
+    transition: .8s;
+    cursor: pointer;
+}
+
+.aboutPage .imgContainer > .img:hover{
+    transform: translate(0px, 0px);
+}
+
+@media only screen and (max-width: 990px) {
+    .aboutPage .imgContainer{
+       display: none;
+    }
+
+    .aboutPage .personalInfoWrapper{
+        width: 100%;
+    }
+}
+
+
+ @media only screen and (max-width: 600px) {
+
+    .aboutPage  .personalInfoWrapper{
+
+    }
+    
+    .aboutPage .personalInfoWrapper h3{
+        font-size: 21px;
+    }
+
+    .aboutPage .personalInfoWrapper .personalInfoBody > ul > li> span{
+      display: block;
+    }
+
+}
+
+
+
+

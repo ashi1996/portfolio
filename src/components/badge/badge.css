@@ -1,0 +1,17 @@
+.badge{
+    color: var(--white);
+    font-size: 12px;
+    padding: 1px 10px;
+    display: inline-block;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    font-weight: 600;
+    background-color: #252525;
+    opacity: .8;
+}
+
+.badge[data-dark=false]{
+    /* color: #fff;
+    background-color: #252525;
+    opacity: .8; */
+}

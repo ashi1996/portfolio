@@ -1,0 +1,96 @@
+.experiance-item{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    position: relative;
+    padding: 0 20px 0 60px;
+    margin: 0 0 50px;
+
+}
+
+.experiance-item .experiance-icon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    line-height: 40px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 50%;
+    color: #fff;
+    background-color: var(--warning);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experiance-item .titel{
+    text-transform: uppercase!important;
+    font-size: 18px;
+    margin: 7px 0 10px;
+
+}
+
+.experiance-item .titel > span{
+    opacity: .8;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    padding-left: 26px;
+}
+
+.experiance-item .titel > span::before{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 2px;
+    background-color: #fff;
+    left: 7px;
+    top: 9px;
+    opacity: .8;
+}
+
+.experiance-item .titel > span[data-dark=false]::before{
+    background-color: var(--gray-light);
+}
+
+.experiance-item .titel:hover{
+
+}
+
+
+.experiance-item p{
+    margin: 0;
+    color: #eee;
+    font-size: 14px;
+}
+
+.experiance-item  p[data-dark=false]{
+    color: var(--gray-light);
+}
+
+.experiance-item  p::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    bottom: 0;
+    border-left: 1px solid #333;
+    /* background-color: red; */
+}
+
+/* hhhh */
+@media only screen and (max-width: 600px) {
+    .experiance-item .titel{
+        font-size: 15px;
+    }
+
+    .experiance-item .titel > span{
+        font-size: 12px;
+    }
+
+
+    .experiance-item .titel > span::before{
+        top: 6px;
+    }
+}

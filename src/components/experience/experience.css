@@ -1,0 +1,30 @@
+.experience-Wrapper{
+
+}
+
+.experience-Wrapper .experience-continer{
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.experience-Wrapper .experience-continer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+@media only screen and (max-width: 990px) {
+    .experience-Wrapper .experience-continer{
+        width: 100%;
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .experience-Wrapper .experience-continer{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
