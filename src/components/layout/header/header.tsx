@@ -3,14 +3,15 @@ import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import './header.css';
-import { toggleDarkMode, toggleI18 } from '../../../features/app-store/appSlice';
+import {toggleMagicWand ,toggleDarkMode, toggleI18 } from '../../../features/app-store/appSlice';
 import { useTranslation } from 'react-i18next';
 import DarkModeSwitch from '../../forms/dark-mode-switch/dark-mode-switch';
+import AutoFixHighOutlinedIcon from '@mui/icons-material/AutoFixHighOutlined';
 
 function Header() {
   const { i18n } = useTranslation();
   const dispatch = useAppDispatch()
-  const { darkMode, language } = useAppSelector(state=> state.appState);
+  const {magicWand ,darkMode, language } = useAppSelector(state=> state.appState);
 
 
   const changeLanguage = () => {
@@ -31,9 +32,14 @@ function Header() {
       {/* <div className='darkBtnContainer' >
          <DarkModeSwitch />
       </div> */}
+
+      
+            
       <div className='darkBtnContainer' >
          <DarkModeSwitch />
-         
+          <div className='wand-container' data-magicWand-active={magicWand} onClick={()=>dispatch(toggleMagicWand())}>
+            <AutoFixHighOutlinedIcon  />
+          </div>
       </div>
       {/* <span onClick={changeLanguage} >
         {

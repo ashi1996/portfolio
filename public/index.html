@@ -30,18 +30,30 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <div id="root"></div>
+    <!-- <div id="root"></div> -->
 
-    <!-- <div class="theBall-outer">
-      <div class="theBall"></div>
-    </div>
+
     <div id="page" class="site">
       <canvas class="banner_canvas" id="canvas_banner"></canvas>
-      <div class="top-title wow fadeInUp" onmousemove="color_hover(event)">
+      <div class="top-title wow fadeInUp" onmousemove="color_hover(event)" ontouchmove="handleTouchMove(event)">
         <div id="root"></div>
       </div>
-    </div> -->
+    </div>
+
 
     <script type="text/javascript" src="flame//main-chunk.js"></script>
   </body>
 </html>
+
+
+
+<!-- <div class="theBall-outer">
+  <div class="theBall"></div>
+</div>
+<div id="page" class="site">
+  <canvas class="banner_canvas" id="canvas_banner"></canvas>
+  <div class="top-title wow fadeInUp" onmousemove="color_hover(event)" ontouchmove="handleTouchMove(event)">
+  <div class="top-title wow fadeInUp" onmousemove="color_hover(event)">
+    <div id="root"></div>
+  </div>
+</div> -->

@@ -14,10 +14,10 @@ function Skills() {
         <div className='skillsSection'>
           { SkillsData.map((itemSkill : ISkill, index : number)=> (
             <FlipCard label={itemSkill.titel} key={index}> 
-              <div className='imgSkillWrapper'>
-              <div className='imgBackgroundContainer ' >
-                <img src={itemSkill.img} className='imgSkills'/>
-              </div>
+              <div className={'imgSkillWrapper'}>
+                <div className='imgBackgroundContainer ' >
+                  <img src={itemSkill.img} className='imgSkills'/>
+                </div>
             </div>
           </FlipCard>
           ))}

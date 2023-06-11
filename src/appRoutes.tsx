@@ -6,7 +6,6 @@ import NotFound from './pages/404/404';
 import AboutPage from './pages/about/about';
 import ContactPage from './pages/contact/contact';
 import HomePage from './pages/home/home';
-// import HomePage from './pages/_home/home';
 import PortfolioPage from './pages/portfolio/portfolio';
 
 function AppRoutes() {

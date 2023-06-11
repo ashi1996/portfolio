@@ -1,6 +1,5 @@
 import React from 'react';
 import './home.css';
-import ProfileImge from '../../assets/media/images/new-profile.jpg'
 import { useTranslation } from 'react-i18next';
 import Button from '../../components/forms/button/button';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
@@ -16,8 +15,6 @@ function HomePage() {
 
   return (
     <div className='pageContainer homePage'  >
-      
-      {/* <div className='mobile-wrapper'> */}
 
         <div className='profile-content'>
           <div className='box-wrapper'>
@@ -37,29 +34,7 @@ function HomePage() {
           </div>
         </div>
 
-      {/* </div> */}
-           
-      
-
-
       <div className='profile-section'> </div>
-
-      
-      
-
-
-
-
-
-
-        
-        {/* <div className='leftBox'>
-            <div className="profile-container">
-              <img alt='profile imge' src={ProfileImge} width="360" height="360" />
-            </div>
-        </div> */}
-      
-
     </div>
   );
 }

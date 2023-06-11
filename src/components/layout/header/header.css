@@ -1,21 +1,35 @@
 
-
 header .darkBtnContainer{
    
     left:  10px;
     top: 0px;
-    /* width: fit-content; */
-    /* border: 1px solid blue; */
     position: absolute;
  
-    z-index: 99999;
+    z-index: 99;
+}
+
+header .darkBtnContainer .wand-container{
+    position: absolute;
+    right: -40px;
+    top: 30px;
+    cursor: pointer;
+}
+
+header .darkBtnContainer .wand-container[data-magicWand-active=true]{
+    color: var(--warning);
 }
 
 
 @media screen and (max-width: 990px) {
     header .darkBtnContainer{
            left:  auto ; 
-           right: 10px;
+           right: 62px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header .darkBtnContainer .wand-container{
+        top: 25px;
     }
 }
 

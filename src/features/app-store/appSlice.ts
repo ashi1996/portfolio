@@ -6,13 +6,15 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 // Define a type for the slice state
 interface AppState {
   darkMode: boolean,
-  language: 'en' | 'he'
+  language: 'en' | 'he',
+  magicWand : boolean
 }
 
 // Define the initial state using that type
 const initialState: AppState = {
   darkMode: true,
-  language : 'en'
+  language : 'en',
+  magicWand : true
 }
 
 export const appSlice = createSlice({
@@ -20,26 +22,31 @@ export const appSlice = createSlice({
   // `createSlice` will infer the state type from the `initialState` argument
   initialState,
   reducers: {
-    toggleDarkMode: (state) => {
-      state.darkMode = !state.darkMode;
-    },
     toggleI18: (state) => {
       state.language = (state.language === 'en') ? 'he' : 'en';
     },
+    toggleDarkMode: (state) => {
+      if(state.darkMode && state.magicWand){
+        state.magicWand = false;
+      } 
+      state.darkMode = !state.darkMode;
+    },
+    toggleMagicWand: (state) => {
+      if(!state.darkMode && !state.magicWand){
+        state.darkMode = true;
+      } 
+      state.magicWand = !state.magicWand;
+    },
     // chengeHosts: (state, action: PayloadAction<HostsResponse[]>) => {
     //   state.hosts =  action.payload;
-    // },
-    // refreshData: (state) => {
-    //   state.refreshReducer =  ++state.refreshReducer;
     // },
   },
 })
 
 export const { 
   toggleDarkMode,
-  toggleI18
-//   chengeHosts,
-//   refreshData
+  toggleI18,
+  toggleMagicWand
 } = appSlice.actions
 
 

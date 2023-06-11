@@ -21,8 +21,6 @@ function ContactPage() {
         <span className='backgroundTitel'>CONTACT</span>
       </div>
 
-
-
       <div>
         <h3>DON'T BE SHY !</h3>
         <div className='sub-titel-container'>
@@ -30,8 +28,6 @@ function ContactPage() {
             <TypingBoard timeMs={25} text='Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.'/>
           </p>
         </div>
-
-
 
         <p className='contact-item'>
           <MapOutlinedIcon className='i'/>
@@ -54,7 +50,6 @@ function ContactPage() {
               +972 55 2286546
           </p>
         </Link>
-
 
         <ul>
           <li>

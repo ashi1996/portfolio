@@ -1,26 +1,13 @@
 .portfolioPage{
-    /* min-height: 180vh; */
     padding-bottom:100px ;
     animation: animate-fade-top 0.7s ease-in-out ;
 }
 
-/* .portfolioPage   .opacity-background{
-  display: none;
-} */
- 
-
 .portfolioPage .portfolioPage-body{
-    /* display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start; */
     display: grid;
     grid-template-columns: repeat(4 ,15rem);
-    /* gap: 30px; */
-
     row-gap: 110px;
     column-gap: 30px;
-
     grid-template-rows: auto;
     justify-content: center;
     align-items: center;

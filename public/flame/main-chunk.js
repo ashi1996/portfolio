@@ -46,6 +46,19 @@ function color_hover(e) {
   pointers[0].y = e.clientY;
 }
 
+function handleTouchMove(event) {
+  // Handle touch move event
+  const touchX = event.touches[0].clientX;
+  const touchY = event.touches[0].clientY;
+  pointers[0].down = true;
+  pointers[0].color = generateColor();
+  pointers[0].moved = pointers[0].down;
+  pointers[0].dx = (touchX- pointers[0].x) * 5.0;
+  pointers[0].dy = (touchY - pointers[0].y) * 5.0;
+  pointers[0].x = touchX;
+  pointers[0].y = touchY;
+}
+
 function color_hover_with_XY(e, X, Y, speed) {
   speed = speed || 50;
   var i = 0;
