@@ -1,0 +1,37 @@
+.tag-cloud {
+  cursor: pointer;
+  /* margin-top: 100px; */
+  position: relative;
+}
+
+.tag-cloud__item {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transition: all 0.1s;
+  will-change: transform, opacity, filter;
+}
+
+.tag-cloud__item[data-dark=true] {
+  color: var(--warning);
+  /* animation: animate-ball-color 2s infinite  alternate; */
+}
+
+
+@keyframes animate-ball-color {
+   /* 0% {
+  }
+  100% {
+  } */
+
+  from {
+    color: var(--warning);
+  }
+  
+  to {
+    color: var(--white);
+  }
+}

@@ -34,7 +34,7 @@ export const ExperienceData = [
             titel : 'Fullstack Developer',
             subTitel: 'M.S.Bit Ltd'
         },
-        description : `In M.S.Bit, I develop numerous projects for companies in various technologies, among them
+        description : `In M.S.Bit, I developed numerous projects for companies in various technologies, among them
         React.js, NEST, NodeJS, MSSQL and MongoDB. In M.S.Bit, I used a variety of external API's
         from custom navigation using google maps, to banking using TINK, and many more.`
     },
@@ -54,7 +54,7 @@ export const ExperienceData = [
             titel : 'Quality Assurance',
             subTitel: 'Air Force IDF'
         },
-        description : `Inspected applications at different phases in their development to ensure they met a set of
+        description : `Inspected applications at different phases of development to ensure they met a set of
         consistent standards. This position required:
         Attention to detail,
         Time management, 

@@ -6,3 +6,7 @@ declare module 'react' {
     isMobile?: string;
   }
 }
+
+// interface Window {
+//   multipleSplats(): void;
+// }

@@ -6,7 +6,6 @@ import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOu
 import { useNavigate } from 'react-router-dom';
 import { appPages } from '../../core/models/appPages';
 import TypingBoard from '../../components/TypingBoard/typingBoard';
-import BallAnimate from '../../components/ball-animate/ball-animate';
 
 function HomePage() {
 
@@ -25,6 +24,9 @@ function HomePage() {
               <p>
                 <TypingBoard timeMs={25} text='Are you looking for a fullstack developer who works hard but stays  humble?'/>  
               </p>
+              {/* <p style={{visibility:'hidden'}}>
+                'Are you looking for a fullstack developer who works hard but stays  humble?  
+              </p> */}
             </div>
             <div className='more-about-btn' >
               <Button action={()=> navigate(appPages.about)} label={t(`${resourcePath}.morAbouteMeBtn`)} outline isActive><ArrowCircleRightOutlinedIcon style={{fontSize:"2em"}}/></Button>
@@ -32,12 +34,7 @@ function HomePage() {
           </div>
         </div>
 
-
-        <div className='ball-container'> 
-            <div className='inner'>
-              <BallAnimate />
-            </div>
-        </div>
+      <div className='profile-section'> </div>
     </div>
   );
 }

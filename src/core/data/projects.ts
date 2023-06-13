@@ -48,7 +48,7 @@ export const ProjectsData = [
     {
         titel : 'factory 54',
         img : FactoryImg,
-        description: `Factory 54 was an e-commerce company specializing in clothing and apparel. As a developer at Factory 54, I was involved in building their e-commerce website. Utilizing React and Material-UI, I crafted a visually appealing and user-friendly design that enhanced the shopping experience for customers. On the server side, we implemented the .NET framework to handle the website's backend operations efficiently. It was an exciting project that combined the power of modern front-end technologies with a robust server infrastructure to create a seamless and secure online shopping platform for Factory 54's customers.`,
+        description: `Factory 54 is an e-commerce company specializing in clothing and apparel. As a developer at Factory 54, I was involved in building their e-commerce website. Utilizing React and Material-UI, I crafted a visually appealing and user-friendly design that enhanced the shopping experience for customers. On the server side, we implemented the .NET framework to handle the website's backend operations efficiently. It was an exciting project that combined the power of modern front-end technologies with a robust server infrastructure to create a seamless and secure online shopping platform for Factory 54's customers.`,
         tags : ['REACT', ".net", 'material-ui'],
         link : 'https://www.factory54.co.il/'
     },
@@ -62,7 +62,7 @@ export const ProjectsData = [
     {
         titel : 'zap group',
         img : ZapImg,
-        description: `As a member of the development team at Zap Group, I played a significant role in constructing the e-commerce store "Narketplace." Leveraging my skills in React (Next.js) and Nest.js, I contributed to building a robust and feature-rich platform.  integrating external stores into the Narketplace, enabling customers to conveniently make purchases through Zap Shop. Additionally, I had the opportunity to implement SAP, streamlining operational processes for efficient inventory management and order fulfillment. It was a rewarding experience to be part of the team that constructed Narketplace, striving to deliver a seamless shopping experience and optimize business operations for Zap Group.`,
+        description: `As a member of the development team at Zap Group, I play a significant role in constructing the e-commerce store "Narketplace." Leveraging my skills in React (Next.js) and Nest.js, I contribute to building a robust and feature-rich platform. integrating external stores into the Narketplace, enabling customers to conveniently make purchases through Zap Shop. Additionally, I have the opportunity to implement SAP, streamlining operational processes for efficient inventory management and order fulfillment. It is a rewarding experience to be part of the team that is constructing this Narketplace, striving to deliver a seamless shopping experience and optimize business operations for Zap Group.`,
         tags : ['react (next)', "node js (nest)", 'material-ui'],
         link : 'https://shop.zap.co.il'
     },

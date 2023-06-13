@@ -8,15 +8,19 @@ import { useNavigate } from 'react-router-dom';
 import { appPages } from '../../core/models/appPages';
 import Skills from '../../components/skills/skills';
 import Experience from '../../components/experience/experience';
+import { sedEmail } from '../../services/email-js/email-js';
+import useUserLocation from '../../core/hooks/useUserLocation';
 
 
 function AboutPage() {
 
   const navigate = useNavigate();
+  const { darkMode, magicWand } = useAppSelector(state=> state.appState);
   const { isLoading, downloadError, handleDownload } = useFileDownloader(
     process.env.PUBLIC_URL + '/pdf/Ashi-Mor-Resume.pdf',
     'Ashi-Mor-Resume.pdf' 
   );
+  const { ip, location, loading } = useUserLocation();
 
   function calculateAge(birthDate="1996-11-04") {
     const today = new Date();
@@ -31,6 +35,27 @@ function AboutPage() {
     }
   
     return age;
+  }
+
+  const downloadCv = () => {
+    handleDownload();
+
+    const templateParams = {
+      isMobile : /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+       navigator.userAgent
+     ),
+     windowWidth : window.innerWidth || null,
+     date : new Date().toLocaleString(),
+     isDarkMode : darkMode,
+     isMagicWand : magicWand,
+      ip,
+      City: location && location.city ,
+      Region: location &&  location.region ,
+      Country: location &&  location.country_name,
+ 
+    };
+  
+    sedEmail(templateParams)
   }
 
   return (
@@ -93,7 +118,7 @@ function AboutPage() {
                 </ul>
               </div>
               <div className=''>
-                <Button action={handleDownload} label={"DOWNLOAD CV"} outline isActive><DownloadForOfflineRoundedIcon style={{fontSize:"2em"}}/></Button>
+                <Button action={downloadCv} label={"DOWNLOAD CV"} outline isActive><DownloadForOfflineRoundedIcon style={{fontSize:"2em"}}/></Button>
               </div>
           </div>
 

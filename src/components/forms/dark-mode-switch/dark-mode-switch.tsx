@@ -7,7 +7,7 @@ import { toggleDarkMode } from '../../../features/app-store/appSlice';
 
 function DarkModeSwitch() {
     const dispatch = useAppDispatch()
-    const { darkMode, language } = useAppSelector(state=> state.appState);
+    const { darkMode } = useAppSelector(state=> state.appState);
 
   return (
     <div>

@@ -19,6 +19,14 @@ function Header() {
     i18n.changeLanguage(language);
   }
 
+  const turnOnWand = () => {
+    dispatch(toggleMagicWand()); 
+    if(magicWand){
+      // @ts-ignore
+      window.multipleSplats(parseInt(Math.random() * 20) + 5)
+    }
+  }
+
   return (
     <header> 
       
@@ -37,7 +45,7 @@ function Header() {
             
       <div className='darkBtnContainer' >
          <DarkModeSwitch />
-          <div className='wand-container' data-magicWand-active={magicWand} onClick={()=>dispatch(toggleMagicWand())}>
+          <div className='wand-container' data-magicWand-active={magicWand} onClick={turnOnWand}>
             <AutoFixHighOutlinedIcon  />
           </div>
       </div>

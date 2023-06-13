@@ -1,9 +1,9 @@
 window.ga = window.ga || function () {
-  (ga.q = ga.q || []).push(arguments)
+  // (ga.q = ga.q || []).push(arguments)
 };
-ga.l = +new Date;
-ga('create', 'UA-105392568-1', 'auto');
-ga('send', 'pageview');
+// ga.l = +new Date;
+// ga('create', 'UA-105392568-1', 'auto');
+// ga('send', 'pageview');
 
 
 const canvas = document.getElementsByTagName("canvas")[0];
@@ -143,9 +143,9 @@ function getWebGLContext(canvas) {
     formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
   }
 
-  if (formatRGBA == null)
-    ga("send", "event", isWebGL2 ? "webgl2" : "webgl", "not supported");
-  else ga("send", "event", isWebGL2 ? "webgl2" : "webgl", "supported");
+  // if (formatRGBA == null)
+    // ga("send", "event", isWebGL2 ? "webgl2" : "webgl", "not supported");
+  // else ga("send", "event", isWebGL2 ? "webgl2" : "webgl", "supported");
 
   return {
     gl,
