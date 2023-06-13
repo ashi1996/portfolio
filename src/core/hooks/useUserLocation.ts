@@ -11,13 +11,11 @@ interface LocationData {
 
 interface UserLocation {
   ip: string;
-  location: LocationData | null;
   loading: boolean;
 }
 
 const useUserLocation = (): UserLocation => {
   const [ip, setIP] = useState('');
-  const [location, setLocation] = useState<LocationData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -27,30 +25,18 @@ const useUserLocation = (): UserLocation => {
         if(response.data && response.data.ip){
             setIP(response.data.ip);
         }
+        setLoading(false);
       } catch (error) {
+        setLoading(false);
         console.log('Error fetching IP:', error);
       }
     };
     fetchIP();
   }, []);
 
-  useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        const response = await axios.get<LocationData>(`https://ipapi.co/${ip}/json/`);
-        setLocation(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.log('Error fetching location:', error);
-      }
-    };
 
-    if (ip) {
-      fetchLocation();
-    }
-  }, [ip]);
 
-  return { ip, location, loading };
+  return { ip, loading };
 };
 
 export default useUserLocation;

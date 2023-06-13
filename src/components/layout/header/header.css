@@ -15,7 +15,7 @@ header .darkBtnContainer .wand-container{
     cursor: pointer;
 }
 
-header .darkBtnContainer .wand-container[data-magicWand-active=true]{
+header .darkBtnContainer .wand-container[data-magic-wand-active=true]{
     color: var(--warning);
 }
 

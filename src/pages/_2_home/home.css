@@ -40,7 +40,7 @@
     box-shadow: inset 98px 0px 171px 123px #ffff;;
 }
 
-.layout[data-magicWand-active=true] .homePage .profile-section {
+.layout[data-magic-wand-active=true] .homePage .profile-section {
     /* display: none; */
     mask-image: linear-gradient(to right, transparent 7%, black);
 }

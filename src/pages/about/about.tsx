@@ -8,54 +8,23 @@ import { useNavigate } from 'react-router-dom';
 import { appPages } from '../../core/models/appPages';
 import Skills from '../../components/skills/skills';
 import Experience from '../../components/experience/experience';
-import { sedEmail } from '../../services/email-js/email-js';
-import useUserLocation from '../../core/hooks/useUserLocation';
+import { EmailTemplates } from '../../services/email-js/email-js.model';
+import useSendMail from '../../core/hooks/useSendMail';
+import { calculateAge } from '../../services/common-functions';
 
 
 function AboutPage() {
 
   const navigate = useNavigate();
-  const { darkMode, magicWand } = useAppSelector(state=> state.appState);
+  const { sendExecute } = useSendMail(EmailTemplates.cvDownloaded);
   const { isLoading, downloadError, handleDownload } = useFileDownloader(
     process.env.PUBLIC_URL + '/pdf/Ashi-Mor-Resume.pdf',
     'Ashi-Mor-Resume.pdf' 
   );
-  const { ip, location, loading } = useUserLocation();
-
-  function calculateAge(birthDate="1996-11-04") {
-    const today = new Date();
-    const birth = new Date(birthDate);
   
-    let age = today.getFullYear() - birth.getFullYear();
-    const monthDiff = today.getMonth() - birth.getMonth();
-    const dayDiff = today.getDate() - birth.getDate();
-  
-    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-      age--;
-    }
-  
-    return age;
-  }
-
   const downloadCv = () => {
     handleDownload();
-
-    const templateParams = {
-      isMobile : /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-       navigator.userAgent
-     ),
-     windowWidth : window.innerWidth || null,
-     date : new Date().toLocaleString(),
-     isDarkMode : darkMode,
-     isMagicWand : magicWand,
-      ip,
-      City: location && location.city ,
-      Region: location &&  location.region ,
-      Country: location &&  location.country_name,
- 
-    };
-  
-    sedEmail(templateParams)
+    sendExecute({newTemplateParams: { label : EmailTemplates.cvDownloaded.label } , sendJustOneTime: true});
   }
 
   return (
@@ -97,7 +66,7 @@ function AboutPage() {
                   <li>
                     <span className='titel'>Phone: </span>
                     <span className='value'>
-                      <a href="tel:+972552286546" >+972552286546</a>
+                      <a href="tel:+972552286546" >+972 55 2286546</a>
                     </span> 
                   </li>
                   {/*  */}

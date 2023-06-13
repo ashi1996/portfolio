@@ -45,7 +45,7 @@ function Header() {
             
       <div className='darkBtnContainer' >
          <DarkModeSwitch />
-          <div className='wand-container' data-magicWand-active={magicWand} onClick={turnOnWand}>
+          <div className='wand-container' data-magic-wand-active={magicWand} onClick={turnOnWand}>
             <AutoFixHighOutlinedIcon  />
           </div>
       </div>

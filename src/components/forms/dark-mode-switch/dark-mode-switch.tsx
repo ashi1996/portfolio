@@ -11,7 +11,7 @@ function DarkModeSwitch() {
 
   return (
     <div>
-        <input type="checkbox" id="darkmode-toggle" checked={darkMode}/>
+        <input type="checkbox" id="darkmode-toggle" checked={darkMode}  onChange={()=>{}}/>
         <label htmlFor="darkmode-toggle" onClick={()=> dispatch(toggleDarkMode())}>
             <DarkModeOutlinedIcon className=" i moon"/>
             <WbSunnyOutlinedIcon className="i sun"/>
