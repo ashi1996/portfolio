@@ -64,12 +64,14 @@ function ContactPage() {
           <li>
           <Link to='https://github.com/ashi1996/' rel="noreferrer" target={'_blank'}><img height='40px' width='40px' className='invertMe' src={GithubIcon}/></Link>
           </li>
-          <li className='share' onClick={async () => {
-            try {
-              await navigator.share({ url: window.location.origin });
-            } catch (err) { }}}>
-            <Link to='' rel="noreferrer" target={'_blank'}><ShareOutlinedIcon height='40px' width='40px' className='share'/></Link>
-          </li>
+            { navigator.share &&
+              <li className='share' onClick={async () => {
+                try {
+                  await navigator.share({ url: window.location.origin , title: "Ashi Mor Portfolio",});
+                } catch (err) { }}}>
+                <Link to='' rel="noreferrer" ><ShareOutlinedIcon height='40px' width='40px' className='share'/></Link>
+              </li>
+            }
         </ul>
       </div>
     </div>
