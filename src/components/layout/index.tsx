@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import { Outlet } from 'react-router-dom'
+import React, {useEffect, useLayoutEffect} from 'react';
+import { Outlet, useLocation } from 'react-router-dom'
 import Header from './header/header';
 import NavBar from './nav-bar/nav-bar';
 import './layout.css';
@@ -9,6 +9,7 @@ import { EmailTemplates } from '../../services/email-js/email-js.model';
 
 function Layout() {
 
+  const location = useLocation();
   const { darkMode, magicWand } = useAppSelector(state => state.appState);
   const { sendExecute } = useSendMail(EmailTemplates.wiewSite);
 
@@ -23,6 +24,10 @@ function Layout() {
       bannerCanvas.style.visibility = magicWand ? 'visible' : 'hidden';
     }
   }, [magicWand]);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className='layout' data-dark={darkMode} data-magic-wand-active={magicWand}>

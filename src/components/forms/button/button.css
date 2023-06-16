@@ -102,7 +102,7 @@
         background-color: var( --warning );
     }
    
-    .btnWrraper[data-outline=false]:hover .button::before,.btnWrraper[data-outline=false]:active , .button:hover::before{
+    .btnWrraper[data-outline=false]:hover .button::before,.btnWrraper[data-outline=false]:active .button::before, .button:hover::before{
        display: none;
     }
 }

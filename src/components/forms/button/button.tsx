@@ -10,7 +10,7 @@ interface IButton {
     action ?: ()=>void
 }
 
-function Button( { children, label,  isActive=false, outline, action=()=>{}} : IButton) {
+function Button( { children, label,  isActive=false, outline=false, action=()=>{}} : IButton) {
 
   const {darkMode} = useAppSelector(state => state.appState);
 
