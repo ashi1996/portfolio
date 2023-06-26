@@ -101,8 +101,16 @@
     .button.active{
         background-color: var( --warning );
     }
-   
+
+    .button::before{
+        content: none ;
+    }
+
+    .btnWrraper[data-outline=true] .button::before{
+        content: ''; 
+    }
+
     .btnWrraper[data-outline=false]:hover .button::before,.btnWrraper[data-outline=false]:active .button::before, .button:hover::before{
-       display: none;
+        content: none ;
     }
 }

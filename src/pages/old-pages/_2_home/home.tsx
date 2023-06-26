@@ -1,11 +1,11 @@
 import React from 'react';
 import './home.css';
 import { useTranslation } from 'react-i18next';
-import Button from '../../components/forms/button/button';
+import Button from '../../../components/forms/button/button';
 import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 import { useNavigate } from 'react-router-dom';
-import { appPages } from '../../core/models/appPages';
-import TypingBoard from '../../components/TypingBoard/typingBoard';
+import { appPages } from '../../../core/models/appPages';
+import TypingBoard from '../../../components/TypingBoard/typingBoard';
 
 function HomePage() {
 
