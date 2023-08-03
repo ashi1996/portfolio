@@ -6,6 +6,7 @@ import './layout.css';
 import { useAppSelector } from '../../app/hooks';
 import useSendMail from '../../core/hooks/useSendMail';
 import { EmailTemplates } from '../../services/email-js/email-js.model';
+import AddReview from '../add-review/add-review';
 
 function Layout() {
 
@@ -30,6 +31,7 @@ function Layout() {
   }, [location.pathname]);
 
   return (
+  <>
     <div className='layout' data-dark={darkMode} data-magic-wand-active={magicWand}>
         <Header/>
         <main className='container'>
@@ -37,7 +39,8 @@ function Layout() {
         </main>
         <NavBar/>
     </div>
-
+    <AddReview />
+  </>
   );
 }
 

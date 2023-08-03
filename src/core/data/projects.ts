@@ -18,6 +18,13 @@ export const ProjectsData = [
         link : 'https://www.usa-mortgages.com/'
     },
     {
+        titel : 'zap group',
+        img : ZapImg,
+        description: `As a member of the development team at Zap Group, I play a significant role in constructing the e-commerce store "Narketplace." Leveraging my skills in React (Next.js) and Nest.js, I contribute to building a robust and feature-rich platform. integrating external stores into the Narketplace, enabling customers to conveniently make purchases through Zap Shop. Additionally, I have the opportunity to implement SAP, streamlining operational processes for efficient inventory management and order fulfillment. It is a rewarding experience to be part of the team that is constructing this Narketplace, striving to deliver a seamless shopping experience and optimize business operations for Zap Group.`,
+        tags : ['react (next)', "node js (nest)", 'material-ui'],
+        link : 'https://shop.zap.co.il'
+    },
+    {
         titel : 'Altshuler',
         img : AltshulerImg,
         description: `As a full-stack developer at Altshuler Shaham, I actively contributed to their website by implementing new features and performing maintenance tasks. One of the core areas I worked on was enhancing the management of pension portfolios for employees and employers. Utilizing technologies like React, Node.js with Nest.js, and TypeScript, I delivered optimized solutions that ensured a smooth user experience. It was a rewarding experience to be part of the team and contribute to the efficient management of pension portfolios for Altshuler Shaham's clients.`,
@@ -58,12 +65,5 @@ export const ProjectsData = [
         description: `At Top Cart & Ort, I had the privilege of developing a unified platform for public transportation in collaboration with the Department of Transportation, working closely with Moovit & Pango. Using React and TypeScript, I crafted a user interface that provided real-time transit information and seamless fare payment systems. On the backend, I leveraged Node.js with a microservices framework called Molecular to ensure scalability and flexibility. MongoDB was utilized as the database to handle the vast amount of transit data. It was an exciting project that aimed to revolutionize public transportation by offering a comprehensive and user-friendly platform.`,
         tags : ['react', "mongodb", 'node js (molecular)' , 'TYPESCRIPT'],
         link : '/404'
-    },
-    {
-        titel : 'zap group',
-        img : ZapImg,
-        description: `As a member of the development team at Zap Group, I play a significant role in constructing the e-commerce store "Narketplace." Leveraging my skills in React (Next.js) and Nest.js, I contribute to building a robust and feature-rich platform. integrating external stores into the Narketplace, enabling customers to conveniently make purchases through Zap Shop. Additionally, I have the opportunity to implement SAP, streamlining operational processes for efficient inventory management and order fulfillment. It is a rewarding experience to be part of the team that is constructing this Narketplace, striving to deliver a seamless shopping experience and optimize business operations for Zap Group.`,
-        tags : ['react (next)', "node js (nest)", 'material-ui'],
-        link : 'https://shop.zap.co.il'
     },
 ]

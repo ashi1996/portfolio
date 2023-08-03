@@ -18,7 +18,7 @@ function ProjectPopup({ isOpen, setIsOpen, project : {description, img, link, ta
   const { darkMode } = useAppSelector(state => state.appState);
 
   return (
-    <PopUp isOpen={isOpen} setIsOpen={setIsOpen}>
+    <PopUp isOpen={isOpen} setIsOpen={setIsOpen} popUpId='project'>
       <div className='project-pop-up'>
             <h2>{titel}</h2>
             <div className='pop-up-body'>

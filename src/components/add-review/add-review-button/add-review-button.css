@@ -1,0 +1,47 @@
+
+ .add-review-button{
+    cursor: pointer;
+    width: 120px;
+    height: 60px;
+    position: fixed;
+    background: var(--warning);
+    left: 0;
+    bottom: 20px;
+    transform: translateX(-60px);
+    z-index: 998;
+    border-radius: 0 100px 100px  0 ;
+    transition: all 0.3s linear;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 5px;
+    animation: animate-slide-left 0.7s ease-in-out ;
+ }
+
+ .add-review-button[data-visible=false]{
+  transform: translateX(-100%);
+ }
+ 
+.add-review-button[data-visible=true]:hover, .add-review-button[data-visible=true]:active{
+  transform: translateX(0px);
+}
+
+.add-review-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.rate-link{
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 990px) {
+  .add-review-button{
+    bottom: 80px;
+  }
+}

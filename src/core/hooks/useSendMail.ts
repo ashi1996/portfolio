@@ -21,7 +21,11 @@ const useSendMail = (emailTemplateObject : {id: number, template: string, label?
             navigator.userAgent
         ),
         windowWidth : window.innerWidth || null,
-        date : new Date().toLocaleString(),
+        date : new Date().toLocaleString('he-IL', {
+            timeZone: 'Asia/Jerusalem',
+            dateStyle: 'short',
+            timeStyle: 'short',
+        }),
         isDarkMode : darkMode,
         isMagicWand : magicWand,
     };

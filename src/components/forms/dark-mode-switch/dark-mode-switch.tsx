@@ -10,7 +10,7 @@ function DarkModeSwitch() {
     const { darkMode } = useAppSelector(state=> state.appState);
 
   return (
-    <div>
+    <div className='switch-container'>
         <input type="checkbox" id="darkmode-toggle" checked={darkMode}  onChange={()=>{}}/>
         <label htmlFor="darkmode-toggle" onClick={()=> dispatch(toggleDarkMode())}>
             <DarkModeOutlinedIcon className=" i moon"/>

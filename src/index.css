@@ -133,7 +133,7 @@ body {
   animation-fill-mode: backwards;
 }
 
-/* Fade In  Top ashi*/
+/*in use*/
 @keyframes animate-fade-top {
   0% {
     opacity: 0;
@@ -146,7 +146,22 @@ body {
   }
 }
 
-/* ashi */
+@keyframes animate-fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes animate-slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  
+  100% {
+    transform: translateX(-140px);
+  }
+}
+
+/* in use */
 
 
 .animate.fade {

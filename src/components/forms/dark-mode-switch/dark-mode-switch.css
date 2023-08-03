@@ -1,4 +1,4 @@
-label {
+.switch-container label {
     
     width:80px;
     height:40px;
@@ -11,7 +11,7 @@ label {
 
   }
 
-  label:after {
+  .switch-container label:after {
     content: "";
     width:40px;
     height: 40px;
@@ -23,71 +23,72 @@ label {
     box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
   }
 
-  input {
+  .switch-container input {
     width: 0;
     height: 0;
     visibility: hidden;
   }
 
-  input:checked + label {
+  .switch-container input:checked + label {
     background: #242424;
   }
   
-  input:checked + label:after {
+  .switch-container input:checked + label:after {
     /* left:80px; */
     /* transform: translateX(-100%); */
     right: 0;
     background: linear-gradient(180deg,#777,#3a3a3a);
   }
-  label, label:after {
+
+  .switch-container label, label:after {
     transition: 0.3s
   }
 
-  label:active:after{ 
+  .switch-container label:active:after{ 
     width: 80px; 
   }
 
 
-  label svg {
+  .switch-container label svg {
     position: absolute;
     z-index: 100;
   }
 
-  label svg.sun {
+  .switch-container label svg.sun {
     left: 7px;
     top: 6px;
     fill:#fff;
     transition: 0.3s;
   }
   
-  label svg.moon {
+  .switch-container label svg.moon {
     top: 6px;
     right: 7px;
     fill:#7e7e7e;
     transition: 0.3s;
   }
 
-  input:checked + label svg.sun {
+  .switch-container input:checked + label svg.sun {
     fill:#7e7e7e;
   }
 
-  input:checked + label svg.moon {
+  .switch-container input:checked + label svg.moon {
     fill:#fff;
   }
 
   @media only screen and (max-width: 600px) {
-    label {
+    .switch-container label {
       width:70px;
       height:35px;
     }
 
-    label:after {
+    .switch-container label:after {
       content: "";
       width:35px;
       height: 35px;
     }
 
-    label:active:after{ 
+    .switch-container label:active:after{ 
       width: 70px; 
     }
   }

@@ -3,8 +3,16 @@ import CloseIcon from '@mui/icons-material/Close';
 import './pop-up.css';
 import CloseBtn from '../../forms/close-btn/close-btn';
 import { useAppSelector } from '../../../app/hooks';
+import Local from '../../../services/local-storage/local-storage';
+import { LOCAL_KEYS } from '../../../services/local-storage/local-storage.model';
+
+enum PopUpIds  {
+  review = 'review',
+  project = 'project'
+}
 
 type Props = {
+  popUpId: `${PopUpIds}`
   customCss?: CSSProperties | undefined,
   children: JSX.Element 
   isOpen : boolean
@@ -12,7 +20,7 @@ type Props = {
   // close : setOpenPopUp
 }
 
-function PopUp({isOpen, children , setIsOpen} : Props) {
+function PopUp({isOpen, children , setIsOpen, popUpId} : Props) {
 
   const { darkMode } = useAppSelector(state => state.appState);
   const innerPopUpRef = useRef<HTMLDivElement>(null);
@@ -29,6 +37,15 @@ function PopUp({isOpen, children , setIsOpen} : Props) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [innerPopUpRef]);
+
+  useEffect(()=>{
+    if(popUpId !== PopUpIds.review){
+      if(!isOpen){
+        return Local.DEL(LOCAL_KEYS.CURRENT_OPEN_POP_UP)
+      }
+      Local.write<any>(LOCAL_KEYS.CURRENT_OPEN_POP_UP, popUpId);
+    }
+  },[isOpen])
 
   return (
     <div className='popup' data-dark={darkMode} style={{display : isOpen ? 'block' : 'none'}}>

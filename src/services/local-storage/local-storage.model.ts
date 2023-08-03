@@ -1,0 +1,4 @@
+export enum LOCAL_KEYS {
+    REVIEW = 'REVIEW',
+    CURRENT_OPEN_POP_UP = 'CURRENT_OPEN_POP_UP'
+}
