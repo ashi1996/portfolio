@@ -17,17 +17,18 @@ type Props = {
   children: JSX.Element 
   isOpen : boolean
   setIsOpen:React.Dispatch<React.SetStateAction<boolean>>
-  // close : setOpenPopUp
+  closeOutsideClick ?: boolean
 }
 
-function PopUp({isOpen, children , setIsOpen, popUpId} : Props) {
+function PopUp({isOpen, children , setIsOpen, popUpId, closeOutsideClick=true} : Props) {
 
   const { darkMode } = useAppSelector(state => state.appState);
   const innerPopUpRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (innerPopUpRef.current && !innerPopUpRef.current.contains(event.target as Node)) {
+      
+      if (closeOutsideClick && innerPopUpRef.current && !innerPopUpRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }

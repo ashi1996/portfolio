@@ -108,7 +108,7 @@ function AddReviewPopUp({ isOpen, setIsOpen } : Props) {
 
   return (
     <>
-      <PopUp isOpen={isOpen} setIsOpen={setIsOpen} popUpId='review'>
+      <PopUp isOpen={isOpen} setIsOpen={setIsOpen} popUpId='review' closeOutsideClick={false}>
         <div className='add-review-pop-up'>
               <h2>היי זה הזמן לתת משוב</h2>
               <div className='pop-up-body'>

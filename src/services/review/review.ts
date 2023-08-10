@@ -2,7 +2,7 @@ import Local from "../local-storage/local-storage";
 import { LOCAL_KEYS } from "../local-storage/local-storage.model";
 import { IReview } from "./review.model";
 
-const OPEN_REVIEW_POP_UP_MS = 35000;
+const OPEN_REVIEW_POP_UP_MS = 10000;
 
 const getReviewFromLocal = () : IReview | null => Local.read<IReview>(LOCAL_KEYS.REVIEW);
 
