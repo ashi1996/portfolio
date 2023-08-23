@@ -5,7 +5,7 @@ import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
 export const ExperienceData = [
     {
         img : <BusinessCenterOutlinedIcon />,
-        duration : 'JANUARY 2023 — PRESENT',
+        duration : 'AUGUST 2022 — PRESENT',
         header : {
             titel : 'Fullstack Developer',
             subTitel: 'Zap Group Ltd'
@@ -29,7 +29,8 @@ export const ExperienceData = [
     },
     {
         img : <BusinessCenterOutlinedIcon />,
-        duration : 'JANUARY 2022 — AUGUST 2022',
+
+        duration : 'OCTOBER 2021 — AUGUST 2022',
         header : {
             titel : 'Fullstack Developer',
             subTitel: 'M.S.Bit Ltd'
@@ -40,7 +41,7 @@ export const ExperienceData = [
     },
     {
         img : <BusinessCenterOutlinedIcon />,
-        duration : 'AUGUST 2021 — JANUARY 2022',
+        duration : 'DECEMBER 2020 — OCTOBER 2021',
         header : {
             titel : 'Fullstack Developer',
             subTitel: '(Freelance)'
@@ -49,7 +50,7 @@ export const ExperienceData = [
     },
     {
         img : <BusinessCenterOutlinedIcon />,
-        duration : 'JANUARY 2018 — JANUARY 2020',
+        duration : 'JANUARY 2018 — AUGUST 2020',
         header : {
             titel : 'Quality Assurance',
             subTitel: 'Air Force IDF'
