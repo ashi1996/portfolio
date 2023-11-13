@@ -4,3 +4,10 @@ export enum appPages {
     portfolio = '/portfolio',
     contact = '/contact'
 }
+
+export enum appSectionsIds {
+    home = 'HOME',
+    about ='ABOUT',
+    portfolio = 'PORTFOLIO',
+    contact = 'CONTACT'
+}

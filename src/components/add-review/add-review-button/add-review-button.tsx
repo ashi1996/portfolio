@@ -1,7 +1,7 @@
 import React from 'react';
-import './add-review-button.css';
 import StarBorderPurple500OutlinedIcon from '@mui/icons-material/StarBorderPurple500Outlined';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import './add-review-button.css';
 
 function AddReviewButton({setIsOpen , show} :any) {
 

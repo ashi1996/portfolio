@@ -1,5 +1,5 @@
 .aboutPage{
-    animation: animate-fade-top 0.7s ease-in-out ;
+    /* animation: animate-fade-top 0.7s ease-in-out ; */
 }
 
 .aboutPage > .aboutBody{
@@ -108,8 +108,12 @@
 
  @media only screen and (max-width: 600px) {
 
-    .aboutPage  .personalInfoWrapper{
+    .aboutPage .titleWrapper{
+        text-align: start;
+    }
 
+    .aboutPage  .personalInfoWrapper{
+   
     }
     
     .aboutPage .personalInfoWrapper h3{
@@ -121,7 +125,3 @@
     }
 
 }
-
-
-
-

@@ -20,7 +20,7 @@
 } */
 
 
-.btnWrraper .titelWrapper{
+.btnWrraper .titleWrapper{
     width: auto;
     display: flex;
     flex-grow: 1;
@@ -50,6 +50,10 @@
 .button[data-dark=true]{
     background: var( --dark-light );
     color:  var(--white-light) ;
+}
+
+.b_active .button{
+    background-color: var( --warning );
 }
 
 .button.active{
@@ -97,6 +101,10 @@
     .button[data-dark=true]{
         background:var(--gray);
         color:  var(--white-light) ;
+    }
+
+    .b_active .button{
+        background-color: var( --warning );
     }
 
     .button.active{

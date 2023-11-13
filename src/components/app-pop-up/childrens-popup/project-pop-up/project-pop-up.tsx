@@ -29,7 +29,11 @@ function ProjectPopup({ isOpen, setIsOpen, project : {description, img, link, ta
                  <img src={img} />
               </div>
               <div className='link' >
-                <a href={link} target='_blank' data-dark={darkMode}>take me to site</a>
+                {
+                  link ? 
+                  <a href={link} target='_blank' data-dark={darkMode}>take me to site</a> : 
+                  ''
+                }
               </div>
 
               <div className='badge-wrapper' >

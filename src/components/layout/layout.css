@@ -30,7 +30,8 @@ h3{
 }
 
 ::-webkit-scrollbar-thumb {
-   background: #989898;
+   /* background: #989898; */
+   background: var(--warning);
 }
 
 ::-webkit-scrollbar-track {
@@ -43,8 +44,12 @@ h3{
 
 @media only screen and (max-width: 990px) {
    .container{
-      padding-bottom: 80px ;
+      padding-bottom: 20px ;
    } 
+
+   .layout {
+      /* padding-bottom: 80px ; */
+   }
 }
 
 @media only screen and (max-width: 600px) {

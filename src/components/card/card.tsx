@@ -35,7 +35,7 @@ const Card: React.FC<cardProps> = ({project : {description, img, link, tags, tit
 
     return (
         <>
-            <div className="card-container">
+            <div className="card-container" data-aos="flip-down">
                 <div className="card">
                     <img onClick={()=>setOpenPopUp(true)} src={img} alt={titel} data-dark={darkMode}/>
                     <div className="card__content">
@@ -44,7 +44,7 @@ const Card: React.FC<cardProps> = ({project : {description, img, link, tags, tit
                                 <p>
                                     {trimText(description)}
                                 </p>
-                                <a href='#' onClick={()=>setOpenPopUp(true) }>READ MORE</a>
+                                <span onClick={()=>setOpenPopUp(true) }>READ MORE</span>
                             </div>
                             
                             <div style={{display:'flex', flexWrap:'wrap', justifyContent: 'start', marginBottom:"10px"}}>
@@ -58,7 +58,7 @@ const Card: React.FC<cardProps> = ({project : {description, img, link, tags, tit
                         </div>
                     
                     <div className='card-titel' >
-                    <h4><a data-dark={darkMode} href={link} target='_blank'>{titel}</a></h4>
+                    <h4><a style={{pointerEvents: link ? 'auto' : 'none'}} data-dark={darkMode} href={link} target='_blank'>{titel}</a></h4>
                     </div>
             
                 </div>

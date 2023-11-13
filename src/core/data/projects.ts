@@ -64,6 +64,6 @@ export const ProjectsData = [
         img : RavKavImg,
         description: `At Top Cart & Ort, I had the privilege of developing a unified platform for public transportation in collaboration with the Department of Transportation, working closely with Moovit & Pango. Using React and TypeScript, I crafted a user interface that provided real-time transit information and seamless fare payment systems. On the backend, I leveraged Node.js with a microservices framework called Molecular to ensure scalability and flexibility. MongoDB was utilized as the database to handle the vast amount of transit data. It was an exciting project that aimed to revolutionize public transportation by offering a comprehensive and user-friendly platform.`,
         tags : ['react', "mongodb", 'node js (molecular)' , 'TYPESCRIPT'],
-        link : '/404'
+        link : ''
     },
 ]

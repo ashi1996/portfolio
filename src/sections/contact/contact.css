@@ -1,9 +1,19 @@
 .contactPage{
-    animation: animate-fade-top 0.7s ease-in-out ;
+    /* animation: animate-fade-top 0.7s ease-in-out ; */
+    text-align: center;
+}
+
+.contactPage .titleWrapper{
+    padding: 20px;
+    padding-top: 0px;
 }
 
 .contactPage .sub-titel-container{
-    min-height: 50px;
+    /* min-height: 50px; */
+    width: 60%;
+    margin: 0 auto;
+    /* min-height: 70px; */
+    /* margin-bottom: 20px; */
 }
 
 .contactPage .sub-titel{
@@ -11,10 +21,10 @@
 }
 
 .contactPage .contact-item{
-    position: relative!important;
+    position: relative !important;
     font-weight: 500;
     font-size: 16px;
-    padding-left: 50px;
+    /* padding-left: 50px; */
     line-height: 25px;
     padding-top: 5px;
     margin-bottom: 20px; ;
@@ -88,12 +98,14 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .contactPage .titelWrapper{
+    .contactPage .titleWrapper{
         padding-bottom: 10px;
+        /* text-align: center; */
     }
 
     .contactPage .sub-titel-container{
         min-height: 100px;
+        width: 100%;
     }
 
     .contactPage .contact-item, .contactPage .sub-titel{

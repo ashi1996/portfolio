@@ -16,7 +16,7 @@ function Button( { children, label,  isActive=false, outline=false, action=()=>{
 
   return (
     <div className='btnWrraper' data-outline={outline} onClick={()=> action()}>
-      {outline && <div className='titelWrapper'>{label}</div>}
+      {outline && <div className='titleWrapper'>{label}</div>}
       <div className={'button ' +(( isActive ) ? 'active' : '')} data-label={outline ? ' ' : label} data-dark={darkMode} >
           {children}
       </div>

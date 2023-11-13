@@ -64,11 +64,14 @@
 
 }
 
-.card-container .card__content .description-wrapper a {
+.card-container .card__content .description-wrapper span {
 	padding: 4px 15px 10px;
 	display: block;
 	text-align: center;
 	font-size: small;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #4ca6cf;
 }
 
 .card-container .card__content a:hover {

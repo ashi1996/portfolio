@@ -5,7 +5,7 @@ import DownloadForOfflineRoundedIcon from '@mui/icons-material/DownloadForOfflin
 import useFileDownloader from '../../core/hooks/useDownloadFile';
 import { useAppSelector } from '../../app/hooks';
 import { useNavigate } from 'react-router-dom';
-import { appPages } from '../../core/models/appPages';
+import { appPages, appSectionsIds } from '../../core/models/appPages';
 import Skills from '../../components/skills/skills';
 import Experience from '../../components/experience/experience';
 import { EmailTemplates } from '../../services/email-js/email-js.model';
@@ -19,26 +19,27 @@ function AboutPage() {
   const { sendExecute } = useSendMail(EmailTemplates.cvDownloaded);
   const { isLoading, downloadError, handleDownload } = useFileDownloader(
     process.env.PUBLIC_URL + '/pdf/Ashi-Mor-Resume.pdf',
-    'Ashi-Mor-Resume.pdf' 
+    'Ashi-Mor-Resume.pdf'
   );
-  
+
   const downloadCv = () => {
     handleDownload();
-    sendExecute({newTemplateParams: { label : EmailTemplates.cvDownloaded.label } , sendJustOneTime: true});
+    sendExecute({ newTemplateParams: { label: EmailTemplates.cvDownloaded.label }, sendJustOneTime: true });
   }
 
   return (
-    <div className='pageContainer aboutPage'>
-      <div className='titelWrapper'>
-        <h1>ABOUT <span>ME</span></h1>
-        <span className='backgroundTitel'>Resume</span>
-      </div>
+    <section id={appSectionsIds.about}>
+      <div className='pageContainer aboutPage' >
+        <div className='titleWrapper'>
+          <h1>ABOUT <span>ME</span></h1>
+          <span className='backgroundTitel'>Resume</span>
+        </div>
 
-      <div className='aboutBody'>
+        <div className='aboutBody'>
 
-        <div className='row'>
-          <div className='personalInfoWrapper'>
-              <h3>PERSONAL INFOS</h3>
+          <div className='row'>
+            <div className='personalInfoWrapper' >
+              <h3 >PERSONAL INFOS</h3>
 
               <div className='personalInfoBody'>
                 <ul>
@@ -67,7 +68,7 @@ function AboutPage() {
                     <span className='titel'>Phone: </span>
                     <span className='value'>
                       <a href="tel:+972552286546" >+972 55 2286546</a>
-                    </span> 
+                    </span>
                   </li>
                   {/*  */}
                   <li>
@@ -87,24 +88,26 @@ function AboutPage() {
                 </ul>
               </div>
               <div className=''>
-                <Button action={downloadCv} label={"DOWNLOAD CV"} outline isActive><DownloadForOfflineRoundedIcon style={{fontSize:"2em"}}/></Button>
+                <Button action={downloadCv} label={"DOWNLOAD CV"} outline isActive><DownloadForOfflineRoundedIcon style={{ fontSize: "2em" }} /></Button>
               </div>
-          </div>
+            </div>
 
-          <div style={{width: '50%', display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <div onClick={()=> navigate(appPages.contact)} className='imgContainer' >
-              <div className='img' />
+            <div style={{ width: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }} data-aos="fade-up-left">
+              {/* <div onClick={()=> navigate(appPages.contact)} className='imgContainer' > */}
+              <div className='imgContainer' >
+                <div className='img' />
+              </div>
             </div>
           </div>
-        </div>
 
-        <hr />
-        <Skills />
-        <hr />
-        <Experience />
-      
+          <hr />
+          <Skills />
+          <hr />
+          <Experience />
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
