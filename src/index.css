@@ -31,6 +31,13 @@ body {
     sans-serif;
 }
 
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
 .pageContainer {
   width: 100%;

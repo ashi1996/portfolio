@@ -1,4 +1,4 @@
-.btnWrraper{
+.btnWrraper {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,7 +8,13 @@
     transition: all .3s linear;
 }
 
-.btnWrraper[data-outline=true]{
+.btnWrraper[data-pulse=true] {
+    -moz-animation: pulse 2s infinite;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
+}
+
+.btnWrraper[data-outline=true] {
     border: 2px solid var(--warning);
     width: 200px;
 }
@@ -20,7 +26,7 @@
 } */
 
 
-.btnWrraper .titleWrapper{
+.btnWrraper .titleWrapper {
     width: auto;
     display: flex;
     flex-grow: 1;
@@ -31,7 +37,7 @@
 }
 
 
-.button{
+.button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,39 +49,41 @@
     cursor: pointer;
     z-index: 2;
     transition: 0.8s;
-    background: var( --white-light );
+    background: var(--white-light);
     color: var(--dark-light);
 }
 
-.button[data-dark=true]{
-    background: var( --dark-light );
-    color:  var(--white-light) ;
+.button[data-dark=true] {
+    background: var(--dark-light);
+    color: var(--white-light);
 }
 
-.b_active .button{
-    background-color: var( --warning );
+.b_active .button {
+    background-color: var(--warning);
 }
 
-.button.active{
-    background-color: var( --warning );
+.button.active {
+    background-color: var(--warning);
 }
 
-.button::before{
+.button::before {
     transition: all .3s linear;
     z-index: -1;
     position: absolute;
     content: ' ';
-    right:  0;
+    right: 0;
     width: 100%;
     height: 100%;
     border-radius: 100px;
-    background-color: var( --warning );
+    background-color: var(--warning);
     opacity: 0;
-    
+
 }
 
-.btnWrraper[data-outline=true]:hover .button::before,.btnWrraper[data-outline=true]:active .button::before, .button:hover::before {
-    background: var( --warning );
+.btnWrraper[data-outline=true]:hover .button::before,
+.btnWrraper[data-outline=true]:active .button::before,
+.button:hover::before {
+    background: var(--warning);
     opacity: 1;
     display: flex;
     align-items: center;
@@ -84,11 +92,11 @@
     z-index: -1;
     position: absolute;
     content: attr(data-label);
-    right:  0;
+    right: 0;
     width: 200px;
     height: 100%;
     border-radius: 100px;
-    background-color: var( --warning );
+    background-color: var(--warning);
 }
 
 
@@ -98,28 +106,47 @@
         opacity: 1;
     }  */
 
-    .button[data-dark=true]{
-        background:var(--gray);
-        color:  var(--white-light) ;
+    .button[data-dark=true] {
+        background: var(--gray);
+        color: var(--white-light);
     }
 
-    .b_active .button{
-        background-color: var( --warning );
+    .b_active .button {
+        background-color: var(--warning);
     }
 
-    .button.active{
-        background-color: var( --warning );
+    .button.active {
+        background-color: var(--warning);
     }
 
-    .button::before{
-        content: none ;
+    .button::before {
+        content: none;
     }
 
-    .btnWrraper[data-outline=true] .button::before{
-        content: ''; 
+    .btnWrraper[data-outline=true] .button::before {
+        content: '';
     }
 
-    .btnWrraper[data-outline=false]:hover .button::before,.btnWrraper[data-outline=false]:active .button::before, .button:hover::before{
-        content: none ;
+    .btnWrraper[data-outline=false]:hover .button::before,
+    .btnWrraper[data-outline=false]:active .button::before,
+    .button:hover::before {
+        content: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 180, 0, 1);
+        /* transform: scale(1); */
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 180, 0, 0);
+        /* transform: scale(1.09);  */
+    }
+
+    100% {
+        /* transform: scale(1); */
+        box-shadow: 0 0 0 50px rgba(255, 180, 0, 0);
     }
 }

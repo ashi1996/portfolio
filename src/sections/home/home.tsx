@@ -9,6 +9,7 @@ import TypingBoard from '../../components/TypingBoard/typingBoard';
 import BallAnimate from '../../components/ball-animate/ball-animate';
 import { Link } from 'react-scroll';
 import GetDeviceInfo from '../../core/hooks/useDeviceInfo';
+import ScrollToIndicator from '../../components/scroll-to-indicator/scroll-to-indicator';
 
 function HomePage() {
 
@@ -16,9 +17,8 @@ function HomePage() {
   const navigate = useNavigate();
   const resourcePath = 'pages.home';
 
-  const deviceInfo =  GetDeviceInfo();
+  const deviceInfo = GetDeviceInfo();
 
-  
   return (
     <section id={appSectionsIds.home} >
       <div className='pageContainer homePage'  >
@@ -39,7 +39,7 @@ function HomePage() {
                 smooth={true}
                 duration={500}
               >
-                <Button action={() => { }} label={t(`${resourcePath}.morAbouteMeBtn`)} outline isActive><ArrowCircleRightOutlinedIcon style={{ fontSize: "2em" }} /></Button>
+                <Button dataPulse={true} action={() => { }} label={t(`${resourcePath}.morAbouteMeBtn`)} outline isActive><ArrowCircleRightOutlinedIcon style={{ fontSize: "2em" }} /></Button>
               </Link>
             </div>
           </div>
@@ -48,14 +48,19 @@ function HomePage() {
         {
           deviceInfo.isDesktop && (
             <div className='ball-container'>
-            <div className='inner'>
-              <BallAnimate />
+              <div className='inner'>
+                <BallAnimate />
+              </div>
             </div>
-          </div>
           )
         }
-      
+
+
+        <ScrollToIndicator link={appSectionsIds.about}/>
+
       </div>
+
+
     </section>
   );
 }
