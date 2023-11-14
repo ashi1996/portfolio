@@ -166,6 +166,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .homePage{
+        height: calc(100dvh - 1px);
+    }
+    
     .homePage .ball-container{
         display: none;
     }
