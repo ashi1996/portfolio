@@ -138,12 +138,12 @@ function AddReviewPopUp({ isOpen, setIsOpen } : Props) {
                 </div>
 
                 <div className='review-form'>
-                  <input className='input' value={name} onChange={(e)=>setName(e.target.value)} name='email' type='email' placeholder='שם / מייל (אופציונלי)' style={{width:"100%", direction:'rtl', padding: "10px", marginBottom:"10px"}}/>
-                  <textarea className='input' value={message} onChange={(e)=>setMessage(e.target.value)} name='review message' placeholder="הכנס הערה... (אופציונלי)" rows={5} style={{width:"100%",  resize: 'none', direction:'rtl', padding: "10px"}}></textarea>
+                  <input aria-label="email" className='input' value={name} onChange={(e)=>setName(e.target.value)} name='email' type='email' placeholder='שם / מייל (אופציונלי)' style={{width:"100%", direction:'rtl', padding: "10px", marginBottom:"10px"}}/>
+                  <textarea aria-label="message" className='input' value={message} onChange={(e)=>setMessage(e.target.value)} name='review message' placeholder="הכנס הערה... (אופציונלי)" rows={5} style={{width:"100%",  resize: 'none', direction:'rtl', padding: "10px"}}></textarea>
                 </div>
 
                 <div className='review-submit-container' data-dark={darkMode}>
-                  <Button action={onSubmitReview} label={"שליחת דירוג"} outline isActive><ThumbUpIcon style={{fontSize:"2em"}}/></Button>
+                  <Button aria-label="send review" action={onSubmitReview} label={"שליחת דירוג"} outline isActive><ThumbUpIcon style={{fontSize:"2em"}}/></Button>
                 </div>
           
               </div>

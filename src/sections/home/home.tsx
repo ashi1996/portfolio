@@ -20,7 +20,7 @@ function HomePage() {
   const deviceInfo = GetDeviceInfo();
 
   return (
-    <section id={appSectionsIds.home} >
+    <section id={appSectionsIds.home} aria-label="home">
       <div className='pageContainer homePage'  >
         <div className='profile-content'>
           <div className='box-wrapper'>
@@ -39,7 +39,7 @@ function HomePage() {
                 smooth={true}
                 duration={500}
               >
-                <Button dataPulse={true} action={() => { }} label={t(`${resourcePath}.morAbouteMeBtn`)} outline isActive><ArrowCircleRightOutlinedIcon style={{ fontSize: "2em" }} /></Button>
+                <Button aria-label="more info" dataPulse={true} action={() => { }} label={t(`${resourcePath}.morAbouteMeBtn`)} outline isActive><ArrowCircleRightOutlinedIcon style={{ fontSize: "2em" }} /></Button>
               </Link>
             </div>
           </div>

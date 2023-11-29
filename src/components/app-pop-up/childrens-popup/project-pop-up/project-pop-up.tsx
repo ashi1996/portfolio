@@ -26,7 +26,7 @@ function ProjectPopup({ isOpen, setIsOpen, project : {description, img, link, ta
                 <p>{description}</p>
               </div>
               <div className='img-wrapper'>
-                 <img src={img} />
+                 <img src={img} alt={`${titel} project img`}/>
               </div>
               <div className='link' >
                 {

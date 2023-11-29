@@ -16,7 +16,7 @@ function Skills() {
             <FlipCard label={itemSkill.titel} key={index}> 
               <div className={'imgSkillWrapper'}  data-aos="zoom-in">
                 <div className='imgBackgroundContainer ' >
-                  <img src={itemSkill.img} className='imgSkills'/>
+                  <img alt={`${itemSkill.titel} icon`} src={itemSkill.img} className='imgSkills'/>
                 </div>
             </div>
           </FlipCard>

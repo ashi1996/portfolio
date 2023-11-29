@@ -15,7 +15,7 @@ import { appPages, appSectionsIds } from '../../core/models/appPages';
 function ContactPage() {
 
   return (
-    <section id={appSectionsIds.contact} >
+    <section id={appSectionsIds.contact} aria-label="contact">
       <div style={{ display: 'flex', minHeight: '100vh', justifyContent: 'center', alignItems: 'center' }}>
         <div className='pageContainer contactPage ' >
           <div className='titleWrapper'>
@@ -56,16 +56,16 @@ function ContactPage() {
 
             <ul >
               <li >
-                <Link to='https://www.linkedin.com/in/ashi-mor' rel="noreferrer" target={'_blank'}><img height='40px' width='40px' src={LinkdinIcon} /></Link>
+                <Link to='https://www.linkedin.com/in/ashi-mor' rel="noreferrer" target={'_blank'}><img alt='Linkedin Icon' height='40px' width='40px' src={LinkdinIcon} /></Link>
               </li>
               <li>
-                <Link to='https://www.facebook.com/profile.php?id=100005002719522' rel="noreferrer" target={'_blank'}><img height='40px' width='40px' src={FacebookIcon} /></Link>
+                <Link to='https://www.facebook.com/profile.php?id=100005002719522' rel="noreferrer" target={'_blank'}><img alt='Facebook Icon'  height='40px' width='40px' src={FacebookIcon} /></Link>
               </li>
               <li>
-                <Link to='https://www.instagram.com/ashi.mor/' rel="noreferrer" target={'_blank'}><img height='40px' width='40px' src={InstagramIcon} /></Link>
+                <Link to='https://www.instagram.com/ashi.mor/' rel="noreferrer" target={'_blank'}><img alt='Instagram Icon' height='40px' width='40px' src={InstagramIcon} /></Link>
               </li>
               <li>
-                <Link to='https://github.com/ashi1996/' rel="noreferrer" target={'_blank'}><img height='40px' width='40px' className='invertMe' src={GithubIcon} /></Link>
+                <Link to='https://github.com/ashi1996/' rel="noreferrer" target={'_blank'}><img alt='Github Icon' height='40px' width='40px' className='invertMe' src={GithubIcon} /></Link>
               </li>
               {navigator.share &&
                 <li className='share' onClick={async () => {

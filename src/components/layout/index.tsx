@@ -13,11 +13,43 @@ function Layout() {
 
   const location = useLocation();
   const { darkMode, magicWand } = useAppSelector(state => state.appState);
-  const { sendExecute } = useSendMail(EmailTemplates.wiewSite);
+  const { sendExecute } = useSendMail(EmailTemplates.viewSite);
+
+  const handleUserInteraction = (() => {
+   
+    const listener = {
+      add_listeners : () => {
+        window.addEventListener('mousemove', _listener_cb);
+        window.addEventListener('keydown', _listener_cb);
+        window.addEventListener('click', _listener_cb);
+      }, 
+      remove_listeners : () => {
+        window.removeEventListener('mousemove', _listener_cb);
+        window.removeEventListener('keydown', _listener_cb);
+        window.removeEventListener('click', _listener_cb);
+      }
+    }
+
+    const _listener_cb = () => {
+      // console.log('User interacted with the site.');
+      sendExecute({newTemplateParams: { label : EmailTemplates.viewSite.label } , sendJustOneTime: true})
+      listener.remove_listeners();
+    };
+
+    return listener;
+  })()
 
   useEffect(() => {
-    sendExecute({newTemplateParams: { label : EmailTemplates.wiewSite.label } , sendJustOneTime: true})
+    handleUserInteraction.add_listeners();     // Event listeners for user interactions
+    return () => {
+      handleUserInteraction.remove_listeners(); // Clean up event listeners when component unmounts
+    };
   }, []);
+
+
+  // useEffect(() => {
+  //   sendExecute({newTemplateParams: { label : EmailTemplates.viewSite.label } , sendJustOneTime: true})
+  // }, []);
 
 
   useEffect(() => {
@@ -30,8 +62,6 @@ function Layout() {
   // useLayoutEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
-
-
 
   return (
   <>

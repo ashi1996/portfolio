@@ -7,7 +7,7 @@ import './portfolio.css';
 function PortfolioPage() {
 
   return (
-    <section id={appSectionsIds.portfolio}>
+    <section id={appSectionsIds.portfolio} aria-label="portfolio">
     <div className='pageContainer portfolioPage' >
         <div className='titleWrapper'>
           <h1>MY <span>PORTFOLIO</span></h1>

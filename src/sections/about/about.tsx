@@ -28,7 +28,7 @@ function AboutPage() {
   }
 
   return (
-    <section id={appSectionsIds.about}>
+    <section id={appSectionsIds.about} aria-label="about">
       <div className='pageContainer aboutPage' >
         <div className='titleWrapper'>
           <h1>ABOUT <span>ME</span></h1>
@@ -88,7 +88,7 @@ function AboutPage() {
                 </ul>
               </div>
               <div className=''>
-                <Button action={downloadCv} label={"DOWNLOAD CV"} outline isActive><DownloadForOfflineRoundedIcon style={{ fontSize: "2em" }} /></Button>
+                <Button aria-label="download CV" action={downloadCv} label={"DOWNLOAD CV"} outline isActive><DownloadForOfflineRoundedIcon style={{ fontSize: "2em" }} /></Button>
               </div>
             </div>
 
