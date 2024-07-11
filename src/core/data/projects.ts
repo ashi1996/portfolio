@@ -29,7 +29,7 @@ export const ProjectsData = [
         img : AltshulerImg,
         description: `As a full-stack developer at Altshuler Shaham, I actively contributed to their website by implementing new features and performing maintenance tasks. One of the core areas I worked on was enhancing the management of pension portfolios for employees and employers. Utilizing technologies like React, Node.js with Nest.js, and TypeScript, I delivered optimized solutions that ensured a smooth user experience. It was a rewarding experience to be part of the team and contribute to the efficient management of pension portfolios for Altshuler Shaham's clients.`,
         tags : ['REACT', "node js (nest)", 'TYPESCRIPT',],
-        link : 'https://ben.as-invest.co.il'
+        link : 'https://www.as-invest.co.il'
     },
     {
         titel : 'my zone',
@@ -43,7 +43,7 @@ export const ProjectsData = [
         img : ThinkzImg,
         description: `At THINKZ, our main focus was to build a website that would provide users with up-to-date information about current affairs in their area. We collected data from various municipalities worldwide and presented a user-friendly navigation system. As part of the team, I contributed to building the interface using React with TypeScript and integrated Google Maps for seamless location-based functionality. On the server side, we utilized .NET to handle data processing and retrieval. It was an exciting project that aimed to empower users with localized information and enhance their overall browsing experience.`,
         tags : ['REACT', "google maps", 'TYPESCRIPT', '.net'],
-        link : 'https://app.thinkz.info/'
+        link : 'https://thinkz.ai'
     },
     {
         titel : 'Mobilab',

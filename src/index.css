@@ -20,6 +20,7 @@
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 html,
@@ -31,11 +32,13 @@ body {
     sans-serif;
 }
 
+a
 input,
 textarea,
 button,
 select,
-a {
+.imgSkillWrapper
+{
     -webkit-tap-highlight-color: transparent;
 }
 
