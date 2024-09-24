@@ -59,7 +59,7 @@ const NavBar = () => {
                 to={navItem._id}
                 spy={true}
                 smooth={true}
-                // offset={10}
+                // offset={-40}
                 duration={500}
                 saveHashHistory={false}
               >

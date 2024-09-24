@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
@@ -26,6 +26,22 @@ function Header() {
       window.multipleSplats(parseInt(Math.random() * 20) + 5)
     }
   }
+
+  useEffect(()=>{
+    const header = document.querySelector("header");
+    const toggleClass = "is-sticky";
+    
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if(header){
+        if (currentScroll > 80) {
+          header.classList.add(toggleClass);
+        } else {
+          header.classList.remove(toggleClass);
+        }
+      }
+    })
+  },[])
 
   return (
     <header> 
